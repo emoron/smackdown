@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import javascript from 'react-syntax-highlighter/languages/prism/javascript'
+import javascript from 'react-syntax-highlighter/languages/hljs/javascript'
 import { duotoneLight } from 'react-syntax-highlighter/styles/prism'
 import { timber } from '../../themes'
 import { registerLanguage } from '../../utils'
