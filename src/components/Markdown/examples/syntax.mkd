@@ -1,0 +1,7 @@
+# Syntax Example
+
+```javascript
+function stuff () {
+  alert('awwww yeahhh!')
+}
+```

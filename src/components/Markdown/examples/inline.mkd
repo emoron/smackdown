@@ -1,0 +1,3 @@
+Here are some `inline` code examples.
+
+`you can break it down`, you can `pop it`, or `lock it`.
