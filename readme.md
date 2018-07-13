@@ -7,13 +7,22 @@
 ```javascript
 import javascript from 'react-syntax-highlighter/languages/prism/javascript'
 import { duotoneLight } from 'react-syntax-highlighter/styles/prism'
-import { Markdown, registerLanguage } from '@timberio/smackdown'
+import { Markdown, registerPrism } from '@timberio/smackdown'
 
 // Register the required languages
-registerLanguage('javascript', javascript)
+registerPrism('javascript', javascript)
+
+const syntax = {
+  lineNumbers: true,
+  theme: duotoneLight,
+  renderer: 'prism'
+}
 
 // Render in React
-<Markdown source="# Some markdown stuff" />
+<Markdown
+  source="# Some markdown stuff"
+  syntax={syntax}
+/>
 ```
 
 ## Demos & Storybook
