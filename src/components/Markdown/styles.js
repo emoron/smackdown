@@ -101,6 +101,10 @@ export const Wrapper = styled('div')`
     padding-left: 5px !important;
   }
 
+  .react-syntax-highlighter-line-number {
+    user-select: none;
+  }
+
   .syntax-shell .react-syntax-highlighter-line-number {
     visibility: hidden;
     position: absolute;

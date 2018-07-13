@@ -1,10 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import javascript from 'react-syntax-highlighter/languages/hljs/javascript'
+import javascript from 'react-syntax-highlighter/languages/prism/javascript'
+import elixir from 'react-syntax-highlighter/languages/prism/elixir'
 import { duotoneLight } from 'react-syntax-highlighter/styles/prism'
 import { timber } from '../../themes'
-import { registerLanguage } from '../../utils'
+import { registerPrism } from '../../utils'
 import Markdown from './Markdown'
 
 // Annoyingly we can't override storybook's markdown->html parsing
@@ -14,7 +15,8 @@ import syntaxExample from './examples/syntax.mkd'
 import inlineExample from './examples/inline.mkd'
 
 // Register the necessary languages for this example
-registerLanguage('javascript', javascript)
+registerPrism('javascript', javascript)
+registerPrism('elixir', elixir)
 
 storiesOf('Markdown', module)
   .add('Basic', () => {

@@ -1,10 +1,9 @@
 import React from 'react'
-import Syntax from 'react-syntax-highlighter/light'
 import Highlight from 'react-syntax-highlighter/light'
 import Prism from 'react-syntax-highlighter/prism-light'
 import { atomDark } from 'react-syntax-highlighter/styles/prism'
 
-const Code = function (props) {
+const Code = props => {
   const {
     children,
     renderer,
@@ -23,7 +22,9 @@ const Code = function (props) {
     )
   }
 
-  let language = className ? className.split('-')[1] : null
+  const language = className
+    ? className.split('-')[1]
+    : null
 
   const Syntax = renderer === 'highlight'
     ? Highlight
