@@ -4,7 +4,7 @@ import { Wrapper } from './styles'
 import Code from '../Code'
 import Header from './overrides/Header'
 
-const Smackdown = function (props) {
+const Smackdown = props => {
   const options = {
     overrides: {
       code: {
@@ -35,7 +35,8 @@ const Smackdown = function (props) {
         component: Header,
         props: { level: 6 },
       },
-    }
+      ...props.overrides,
+    },
   }
 
   return (
